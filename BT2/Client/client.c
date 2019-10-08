@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     struct sockaddr_in address; 
     int sock = 0, valread; 
     struct sockaddr_in serv_addr; 
-    char *hello = "Hello from client";
+    char *hello = "Hello from client.";
     char hello1[999]={0};
     char buffer[1024] = {0}; 
     char add[225];
@@ -48,22 +48,22 @@ int main(int argc, char const *argv[])
         // printf("Hello message sent\n"); 
         valread = read( sock , buffer, 1024); 
         printf("%s\n",buffer );
-        if(strcmp(buffer, "Hello client!\nWhat is your name?") == 0){
-		char name_client[99];
-		printf("Enter your name: ");
-		gets(name_client);
+    //     if(strcmp(buffer, "Hello client!\nWhat is your name?") == 0){
+	// 	char name_client[99];
+	// 	printf("Enter your name: ");
+	// 	gets(name_client);
 		
-        	fflush(stdin);
-		strcpy(hello1, "My name is ");
-		strcat(hello1, name_client);
-		strcat(hello1, " ! Nice to meet you!\n");
-		printf("%s", hello1);
+    //     	fflush(stdin);
+	// 	strcpy(hello1, "My name is ");
+	// 	strcat(hello1, name_client);
+	// 	strcat(hello1, " ! Nice to meet you!\n");
+	// 	printf("%s", hello1);
 		
-		send(sock , hello1 , strlen(hello1) , 0 );
-		close(sock);
-		return 0; 
+	// 	send(sock , hello1 , strlen(hello1) , 0 );
+	// 	close(sock);
+	// 	return 0; 
 		
-	}
+	// }
         if (strcmp(mess_from_client, "bye") == 0)
         {
             _continue = 0;
