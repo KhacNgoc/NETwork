@@ -1,3 +1,6 @@
+// Ho ten: Nguyen Khac Ngoc
+// MSSV: 17020931
+// Mo ta: Gui file.
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/socket.h>
